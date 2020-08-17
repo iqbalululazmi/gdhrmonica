@@ -71,6 +71,6 @@ $ python manage.py runserver
 ### If you want use on localhost, you can tunneling the host by using ngrok
 ```bash
 Run the the ngrok.exe
-and then run the command 
+and then execute the command 
 $ ngrok http {host}
 ```
