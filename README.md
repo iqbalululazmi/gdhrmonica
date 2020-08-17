@@ -67,3 +67,10 @@ $ python manage.py migrate
 ```bash
 $ python manage.py runserver
 ```
+
+### If you want use on localhost, you can tunneling the host by using ngrok
+```bash
+Run the the ngrok.exe
+and then run the command 
+$ ngrok http {host}
+```

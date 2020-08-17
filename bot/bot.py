@@ -10,20 +10,17 @@ number_of_questions = len(QUESTIONS)
 start_command = "/start"
 restart_command = "restart"
 
-
-def markup_choices(choices):
-    if not choices:
-        return telebot.types.ReplyKeyboardRemove(selective=False)
-
-    markup = telebot.types.ReplyKeyboardMarkup(True, False)
-    for choice in choices:
-        markup.add(telebot.types.KeyboardButton(choice))
-
-    return markup
-
-
 @bot.message_handler()
-def handler(message):
+def handler(message): 
+    if message.text == 'survey':
+        return survey_handler(message)
+    else:
+        return unknown_replay(message)
+
+def unknown_replay(message):
+    bot.send_message(message.from_user.id, "Maafin monica ya, belum paham yang kamu maksud.")
+
+def survey_handler(message):
     registrant, _ = Respondent.objects.get_or_create(
         user_id=message.from_user.id,
         defaults={
@@ -60,3 +57,13 @@ def handler(message):
 
     response.step += 1
     response.save(update_fields=["step"])
+
+def markup_choices(choices):
+    if not choices:
+        return telebot.types.ReplyKeyboardRemove(selective=False)
+
+    markup = telebot.types.ReplyKeyboardMarkup(True, False)
+    for choice in choices:
+        markup.add(telebot.types.KeyboardButton(choice))
+
+    return markup
