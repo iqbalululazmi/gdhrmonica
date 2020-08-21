@@ -1,25 +1,25 @@
 QUESTIONS = [
     {
-      "text": "Hallo, berikut adalah survey standar",
+      "text": "Hallo, berikut adalah survey standar mengenai tingkat kegantengan iqbal menurut hati nurani anda",
+      "choices": ["Ikut Survey", "Tidak"]
     },
     {
-        "text": "Test Pertama?",
-        "choices": [1, 2, 3, 4, 5]
+        "text": "Apakah menurut anda seorang iqbal itu ganteng sekali ?",
+        "choices": ["Ganteng beut", "Sangat gantent", "Oh paasti ganteng se RT"]
     },
     {
-        "text": "Tes kedua",
-        "choices": [1, 2, 3, 4, 5],
+        "text": "Kenapa anda terpesona dengan iqbal ?",
+        "choices": ["Karena dia ganteng", "dia ganteng titik", "keren abis"],
     },
     {
-        "text": "Tes ketiga?"
+        "text": "Menurut pandangan anda, bagaimana ketampanan iqbal bermanfaat di kehidupan anda?",
     },
     {
-        "text": "Tes keempat?",
+        "text": "Oke terakhir, seberapa anda minder anda terhadap iqbal?",
         "choices": [
-            "Telegram",
-            "Facebook",
-            "Instagram",
-            "Greatday",
+            "Malu - malu kucing",
+            "Pernah kepleset waktu liat iqbal",
+            "No commet ah, malu"
         ]
     },
 ]
